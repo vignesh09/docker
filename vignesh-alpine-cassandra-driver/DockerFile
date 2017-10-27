@@ -1,0 +1,5 @@
+from alpine:3.5
+RUN apk add --update python py-pip py-django
+RUN pip install cassandra-driver
+EXPOSE 8000
+CMD ["python","manage.py","runserver","0.0.0.0:8000"]
